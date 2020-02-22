@@ -7,17 +7,14 @@ class Counter extends Component{
     tags: ['tag1','tag2','tag3']
   };
 
-  constructor(){
-    super();
-    this.handleIncrement = this.handleIncrement.bind(this);
+  handleIncrement = () => {
+
+
+    this.setState({count: this.state.count + 1})
 
   }
 
-
-  handleIncrement(){
-    console.log('Increment Clicked', this);
-
-  }
+//if you use arrow functions you never need to bind 'this'
 
 
   render(){
